@@ -130,6 +130,14 @@ export class MembershipService {
       };
       
       createdPeriods.push(period);
+      membershipPeriods.push({
+        id: period.id,
+        uuid: period.uuid,
+        membership: period.membership,
+        start: period.start.toISOString().split('T')[0],
+        end: period.end.toISOString().split('T')[0],
+        state: period.state
+      });
       periodStart = periodValidUntil;
     }
 
