@@ -107,11 +107,6 @@ export class MembershipService {
 
     const createdPeriods: MembershipPeriod[] = [];
     let periodStart = validFrom;
-
-    console.log('validFrom', validFrom);
-    console.log('validUntil', validUntil);
-    console.log('req.billingPeriods', req.billingPeriods);
-    console.log('req.billingInterval', req.billingInterval);
     
     for (let i = 0; i < req.billingPeriods; i++) {
       const periodValidFrom = periodStart;
