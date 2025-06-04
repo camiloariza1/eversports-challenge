@@ -1,0 +1,28 @@
+meta {
+  name: createMembership
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3099/memberships
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 1,
+    "uuid": "123e4567-e89b-12d3-a456-426614174004",
+    "name": "Platinum Plan",
+    "userId": 2001,
+    "recurringPrice": 160.0,
+    "validFrom": "2025-06-01",
+    "validUntil": "2025-12-31",
+    "state": "active",
+    "assignedBy": "Admin",
+    "paymentMethod": "credit card",
+    "billingInterval": "monthly",
+    "billingPeriods": 6
+  }
+}
